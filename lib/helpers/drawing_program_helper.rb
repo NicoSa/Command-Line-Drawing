@@ -1,15 +1,15 @@
 module DrawingProgramHelper
 
-	def determine_size_of_canvas(size)
-		@split_coordinates = size.split.drop(1)
+	def convert_coordinates_to_array(coordinates)
+		coordinates.split.drop(1)
 	end
 
 	def height
-		@split_coordinates[1]
+		@canvas_array[1]
 	end
 
 	def width
-		@split_coordinates[0]
+		@canvas_array[0]
 	end
 
 	def convert_canvas_to_string

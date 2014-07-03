@@ -7,17 +7,21 @@ describe 'Drawing Program Helper' do
 	end
 
 	it 'returns array of coordinates' do
-		expect(determine_size_of_canvas("C 20 4")).to eq ["20","4"]
+		expect(convert_coordinates_to_array("C 20 4")).to eq ["20","4"]
 	end
 
 	it 'returns height' do
-		@drawing_program.determine_size_of_canvas("C 20 4")
+		@drawing_program.create_canvas("C 20 4")
 		expect(@drawing_program.height).to eq "4"
 	end
 
 	it 'returns width' do
-		@drawing_program.determine_size_of_canvas("C 20 4")
+		@drawing_program.create_canvas("C 20 4")
 		expect(@drawing_program.width).to eq "20"
+	end
+
+	it 'returns location of line' do
+
 	end
 
 end
