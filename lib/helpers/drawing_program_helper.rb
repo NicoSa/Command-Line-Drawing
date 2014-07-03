@@ -5,10 +5,10 @@ module DrawingProgramHelper
 	end
 
 	def height
-		@split_coordinates[0]
+		@split_coordinates[1]
 	end
 
 	def width
-		@split_coordinates[1]
+		@split_coordinates[0]
 	end
 end
