@@ -10,9 +10,10 @@ class DrawingProgram
 
   def create_canvas(coordinates)
     determine_size_of_canvas(coordinates)
-    convert_canvas_to_string
+    @canvas = convert_canvas_to_string
   end
 
   def draw_line(line)
+  	@canvas.chars
   end
 end

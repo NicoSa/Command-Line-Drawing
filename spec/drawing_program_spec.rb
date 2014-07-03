@@ -20,6 +20,11 @@ describe 'Drawing Program' do
 
 	it 'creates a line from 1,2 to 1,6' do
 		@drawing_program.create_canvas("C 20 4")
-		expect(@drawing_program.draw_line("L 1 2 1 6")).to eq canvas_with_line
+		expect(@drawing_program.draw_line("L 1 2 1 6")).to eq canvas_with_line_1
 	end
+
+	it 'creates a line from 2,2 to 2,6' do
+		@drawing_program.create_canvas("C 20 4")
+		expect(@drawing_program.draw_line("L 2 2 2 6")).to eq canvas_with_line_2
+	end	
 end
