@@ -8,11 +8,11 @@ class DrawingProgram
     puts 'enter command:'
   end
 
-  def create_canvas(size)
-    extract_coordinates(size)
-    (("-" * width.to_i) + "\n" +
-    ("|" + (" " * (width.to_i - 2)) + "|\n") * height.to_i +
-    ("-" * width.to_i)).to_s
+  def create_canvas(coordinates)
+    determine_size_of_canvas(coordinates)
+    convert_canvas_to_string
   end
 
+  def draw_line(line)
+  end
 end
