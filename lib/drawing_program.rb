@@ -1,8 +1,8 @@
-require 'helpers/drawing_program_helper'
+#require 'helpers/drawing_program_helper'
 
 class DrawingProgram
 
-  include DrawingProgramHelper
+  #include DrawingProgramHelper
 
   def initialize
     puts 'enter command:'
