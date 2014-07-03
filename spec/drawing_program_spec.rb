@@ -27,4 +27,9 @@ describe 'Drawing Program' do
 		@drawing_program.create_canvas("C 20 4")
 		expect(@drawing_program.draw_horizontal_line("L 2 2 2 6")).to eq canvas_with_line_2
 	end	
+
+	it 'creates a horizontal line from 3,3 to 3,9' do
+		@drawing_program.create_canvas("C 18 5")
+		expect(@drawing_program.draw_horizontal_line("L 3 3 3 9")).to eq canvas_with_line_3
+	end
 end

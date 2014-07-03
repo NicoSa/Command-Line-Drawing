@@ -20,8 +20,10 @@ describe 'Drawing Program Helper' do
 		expect(@drawing_program.width).to eq "20"
 	end
 
-	it 'returns location of line' do
-
+	it 'converts canvas to string' do
+    	@canvas_array = convert_coordinates_to_array("C 20 4")
+    	@canvas = convert_canvas_to_string
+    	expect(@canvas).to eq canvas_20_by_4
 	end
 
 end
