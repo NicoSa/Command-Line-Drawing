@@ -1,15 +1,15 @@
-#require 'helpers/drawing_program_helper'
-#require 'helpers/horizontal_line_helper'
+#require 'helpers/drawhelper'
+#require 'helpers/line_helper'
 
 class DrawingProgram
 
-  #include DrawingProgramHelper
-  #include HorizontalLineHelper
+  #include DrawHelper
+  #include LineHelper
   attr_reader :canvas, :canvas_array
 
-  def initialize
-    puts 'enter command:'
-  end
+  # def initialize
+  #   puts 'enter command:'
+  # end
 
   def create_canvas(coordinates)
     @canvas_array = convert_coordinates_to_array(coordinates)

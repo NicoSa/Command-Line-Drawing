@@ -1,4 +1,4 @@
-module DrawingProgramHelper
+module DrawHelper
 
 	def convert_coordinates_to_array(coordinates)
 		coordinates.split.drop(1)

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Drawing Line Helper' do
+describe 'Line Helper' do
 
   before(:each) do
     @drawing_program = DrawingProgram.new
@@ -38,6 +38,6 @@ describe 'Drawing Line Helper' do
 	create_canvas("C 20 4")
   	@drawing_program.set_line_variables("L 6 3 6 4")
   	@drawing_progra.calculate_vertical_line_array
-	expect(@drawing_program.line_array).to eq [73,95]
+	expect(@drawing_program.line_array).to eq [73, 95]
   end
 end

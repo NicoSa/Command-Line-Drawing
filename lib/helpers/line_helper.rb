@@ -1,4 +1,4 @@
-module HorizontalLineHelper
+module LineHelper
 
   attr_reader :line_array, :canvas, :canvas_array, :x1, :x2, :y1, :y2
 
@@ -9,6 +9,7 @@ module HorizontalLineHelper
 
   def calculate_horizontal_line_array
     return calculate_vertical_line_array if @x1 == @x2
+
     horizontal_starting_point = ((@y1.to_i *  (width.to_i + 2)) + 1) + @x1.to_i + (y2.to_i - 1)
     horizontal_end_point = horizontal_starting_point + (@x2.to_i - @x1.to_i)
 
@@ -19,6 +20,7 @@ module HorizontalLineHelper
     vertical_starting_point = y1.to_i * (width.to_i + 2) + 1 + y2.to_i
     vertical_length = y1.to_i - y2.to_i
     vertical_end_point = vertical_length * vertical_starting_point
+
     @line_array = [vertical_starting_point, vertical_length]
   end
 

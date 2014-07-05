@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-describe 'Drawing Program' do
+describe 'Draw' do
 
   before(:each) do
     @drawing_program = DrawingProgram.new
   end
 
-  it 'prefixes all prompts with "enter command:\n"' do
-    expect { DrawingProgram.new }.to output("enter command:\n").to_stdout
-  end
+  # it 'prefixes all prompts with "enter command:\n"' do
+  #   expect { DrawingProgram.new }.to output("enter command:\n").to_stdout
+  # end
 
   context 'Canvas' do
 

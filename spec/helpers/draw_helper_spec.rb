@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Drawing Program Helper' do
+describe 'Draw Helper' do
 
   before(:each) do
     @drawing_program = DrawingProgram.new
