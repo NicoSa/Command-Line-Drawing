@@ -20,16 +20,21 @@ describe 'Drawing Program' do
 
 	it 'creates a horizontal line from 1,2 to 6,2' do
 		@drawing_program.create_canvas("C 20 4")
-		expect(@drawing_program.draw_horizontal_line("H 1 2 6 2")).to eq canvas_with_line_1
+		expect(@drawing_program.draw_horizontal_line("L 1 2 6 2")).to eq canvas_with_line_1
 	end
 
 	it 'creates a horizontal line from 2,2 to 6,2' do
 		@drawing_program.create_canvas("C 20 4")
-		expect(@drawing_program.draw_horizontal_line("H 2 2 6 2")).to eq canvas_with_line_2
+		expect(@drawing_program.draw_horizontal_line("L 2 2 6 2")).to eq canvas_with_line_2
 	end	
 
 	it 'creates a horizontal line from 3,3 to 9,3' do
 		@drawing_program.create_canvas("C 18 5")
-		expect(@drawing_program.draw_horizontal_line("H 3 3 9 3")).to eq canvas_with_line_3
+		expect(@drawing_program.draw_horizontal_line("L 3 3 9 3")).to eq canvas_with_line_3
+	end
+
+	it 'creates a horizontal line from 5,5 to 7,5' do
+		@drawing_program.create_canvas("C 10 8")
+		expect(@drawing_program.draw_horizontal_line("L 5 5 7 5")).to eq canvas_with_line_4
 	end
 end

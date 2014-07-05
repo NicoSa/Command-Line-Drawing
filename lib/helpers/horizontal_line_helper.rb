@@ -8,7 +8,7 @@ module HorizontalLineHelper
   end
 
   def calculate_horizontal_line_array
-    horizontal_starting_point = ((@y1.to_i *  (width.to_i + 2)) + 1) + @x1.to_i
+    horizontal_starting_point = ((@y1.to_i *  (width.to_i + 2)) + 1) + @x1.to_i + (y2.to_i - 1)
     horizontal_end_point = horizontal_starting_point + (@x2.to_i - @x1.to_i)
 
     @line_array = [*(horizontal_starting_point...(horizontal_end_point + 1))]
@@ -17,7 +17,7 @@ module HorizontalLineHelper
   def display_canvas_with_horizontal_line
     @canvas.chars.map.with_index do |elem,index|
       if @line_array.include?(index)
-        elem.gsub!(" ","X")
+        elem = "X"
       else
         elem
       end
