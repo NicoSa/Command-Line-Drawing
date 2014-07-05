@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'Draw' do
 
   before(:each) do
-    @drawing_program = DrawingProgram.new
+    @drawing_program = Draw.new
   end
 
   context 'Canvas' do
