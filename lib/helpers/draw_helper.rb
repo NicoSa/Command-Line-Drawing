@@ -5,11 +5,11 @@ module DrawHelper
 	end
 
 	def height
-		@canvas_array[1]
+		@canvas_array[1].to_i
 	end
 
 	def width
-		@canvas_array[0]
+		@canvas_array[0].to_i
 	end
 
 	def convert_canvas_to_string

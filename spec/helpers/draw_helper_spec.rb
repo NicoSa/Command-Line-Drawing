@@ -12,12 +12,12 @@ describe 'Draw Helper' do
 
   it 'returns height' do
     create_canvas("C 20 4")
-    expect(@drawing_program.height).to eq "4"
+    expect(@drawing_program.height).to eq 4
   end
 
   it 'returns width' do
     create_canvas("C 20 4")
-    expect(@drawing_program.width).to eq "20"
+    expect(@drawing_program.width).to eq 20
   end
 
   it 'converts canvas to string' do

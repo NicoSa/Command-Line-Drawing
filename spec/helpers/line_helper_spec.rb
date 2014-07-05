@@ -8,10 +8,10 @@ describe 'Line Helper' do
 
   it 'has set line variables' do
     set_line_variables("L 1 2 6 2")
-    expect(@x1).to eq "1"
-    expect(@y1).to eq "2"
-    expect(@x2).to eq "6"
-    expect(@y2).to eq "2"
+    expect(@x1).to eq 1
+    expect(@y1).to eq 2
+    expect(@x2).to eq 6
+    expect(@y2).to eq 2
   end
 
   it 'calculates horizontal line array for a canvas of 20,4 and a horizontal line of 1,2 6,2' do

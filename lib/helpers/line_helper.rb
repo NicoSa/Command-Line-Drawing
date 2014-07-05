@@ -4,24 +4,31 @@ module LineHelper
 
   def set_line_variables(coordinates)
     horizontal_line_array = convert_coordinates_to_array(coordinates)
-    @x1, @y1, @x2, @y2  = horizontal_line_array[0], horizontal_line_array[1], horizontal_line_array[2], horizontal_line_array[3]
+    @x1, @y1, @x2, @y2 = horizontal_line_array[0].to_i, horizontal_line_array[1].to_i, horizontal_line_array[2].to_i, horizontal_line_array[3].to_i
   end
 
   def calculate_horizontal_line_array
     return calculate_vertical_line_array if @x1 == @x2
 
-    horizontal_starting_point = ((@y1.to_i *  (width.to_i + 2)) + 1) + @x1.to_i + (y2.to_i - 1)
-    horizontal_end_point = horizontal_starting_point + (@x2.to_i - @x1.to_i)
+    horizontal_starting_point = ((@y1 * (width.to_i + 2)) + 1) + @x1 + (y2 - 1)
+    horizontal_end_point = horizontal_starting_point + (@x2 - @x1) + 1
 
-    @line_array = [*(horizontal_starting_point...(horizontal_end_point + 1))]
+    @line_array = [*(horizontal_starting_point...horizontal_end_point)]
   end
 
   def calculate_vertical_line_array
-    vertical_starting_point = ((@y1.to_i * (width.to_i + 2)) + 1) + @x1.to_i + (y1.to_i - 1)
-    vertical_end_point = vertical_starting_point + ((@y2.to_i - @y1.to_i) * (width.to_i + 2))
-    
+    @line_array = []
 
-    @line_array = [vertical_starting_point, (vertical_end_point + 1)]
+    @line_array << (vertical_starting_point = ((@y1 * (width + 2)) + 1) + @x1 + (y1 - 1))
+
+    if (@y2 - @y1) == 1
+      @line_array << ((vertical_starting_point + ((@y2 - @y1) * (width + 2))) + 1)
+    else
+      (@y2).downto((@y1 + 1)) do |row|
+        @line_array << (vertical_starting_point + ((@y2 - @y1) * ( row * (width + 2))))
+      end
+    end
+    @line_array
   end
 
   def display_canvas_with_line
