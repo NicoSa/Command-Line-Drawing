@@ -1,5 +1,5 @@
-require './lib/drawing_program.rb'
-require './lib/helpers/drawing_program_helper.rb'
-require './lib/helpers/horizontal_line_helper.rb'
-include DrawingProgramHelper
-include HorizontalLineHelper
+require './lib/draw.rb'
+require './lib/helpers/draw_helper.rb'
+require './lib/helpers/line_helper.rb'
+include DrawHelper
+include LineHelper
