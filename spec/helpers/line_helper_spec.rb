@@ -37,7 +37,14 @@ describe 'Line Helper' do
   it 'calculate vertical line array for a canvas of 20,4 and a vertical line of 6,3 to 6,4' do
 	create_canvas("C 20 4")
   	@drawing_program.set_line_variables("L 6 3 6 4")
-  	@drawing_progra.calculate_vertical_line_array
-	expect(@drawing_program.line_array).to eq [73, 95]
+  	@drawing_program.calculate_vertical_line_array
+	expect(@drawing_program.line_array).to eq [75, 98]
+  end
+
+  it 'calculate vertical line array for a canvas of 20,4 and a vertical line of 5,2 to 5,4' do
+	create_canvas("C 20 4")
+  	@drawing_program.set_line_variables("L 5 2 5 4")
+  	@drawing_program.calculate_vertical_line_array
+	expect(@drawing_program.line_array).to eq [51, 74, 96]
   end
 end

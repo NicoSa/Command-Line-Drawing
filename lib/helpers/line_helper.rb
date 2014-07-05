@@ -17,11 +17,11 @@ module LineHelper
   end
 
   def calculate_vertical_line_array
-    vertical_starting_point = y1.to_i * (width.to_i + 2) + 1 + y2.to_i
-    vertical_length = y1.to_i - y2.to_i
-    vertical_end_point = vertical_length * vertical_starting_point
+    vertical_starting_point = ((@y1.to_i * (width.to_i + 2)) + 1) + @x1.to_i + (y1.to_i - 1)
+    vertical_end_point = vertical_starting_point + ((@y2.to_i - @y1.to_i) * (width.to_i + 2))
+    
 
-    @line_array = [vertical_starting_point, vertical_length]
+    @line_array = [vertical_starting_point, (vertical_end_point + 1)]
   end
 
   def display_canvas_with_line
