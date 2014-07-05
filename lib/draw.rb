@@ -1,15 +1,12 @@
-#require 'helpers/drawhelper'
-#require 'helpers/line_helper'
+require 'helpers/drawhelper'
+require 'helpers/line_helper'
 
 class DrawingProgram
 
-  #include DrawHelper
-  #include LineHelper
+  include DrawHelper
+  include LineHelper
+  
   attr_reader :canvas, :canvas_array
-
-  # def initialize
-  #   puts 'enter command:'
-  # end
 
   def create_canvas(coordinates)
     @canvas_array = convert_coordinates_to_array(coordinates)
@@ -17,7 +14,7 @@ class DrawingProgram
   end
 
   def draw_line(coordinates)
-  	precompile_line_data(coordinates)
+    precompile_line_data(coordinates)
     display_canvas_with_line
   end
 

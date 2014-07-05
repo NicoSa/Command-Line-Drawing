@@ -21,13 +21,10 @@ module LineHelper
 
     @line_array << (vertical_starting_point = ((@y1 * (width + 2)) + 1) + @x1 + (y1 - 1))
 
-    if (@y2 - @y1) == 1
-      @line_array << ((vertical_starting_point + ((@y2 - @y1) * (width + 2))) + 1)
-    else
-      (@y2).downto((@y1 + 1)) do |row|
-        @line_array << (vertical_starting_point + ((@y2 - @y1) * ( row * (width + 2))))
-      end
+    (1).upto(@y2 - @y1) do |row|
+      @line_array << (vertical_starting_point + ( row * (width + 2)) + 1 + (row - 1))
     end
+
     @line_array
   end
 
