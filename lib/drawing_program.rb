@@ -5,6 +5,7 @@ class DrawingProgram
 
   #include DrawingProgramHelper
   #include HorizontalLineHelper
+  attr_reader :canvas, :canvas_array
 
   def initialize
     puts 'enter command:'
@@ -15,9 +16,9 @@ class DrawingProgram
     @canvas = convert_canvas_to_string
   end
 
-  def draw_horizontal_line(coordinates)
-  	precompile_horizontal_line_data(coordinates)
-    display_canvas_with_horizontal_line
+  def draw_line(coordinates)
+  	precompile_line_data(coordinates)
+    display_canvas_with_line
   end
 
 end
