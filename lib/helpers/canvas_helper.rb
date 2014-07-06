@@ -1,4 +1,9 @@
-module DrawHelper
+module CanvasHelper
+
+  def precompile_canvas_data(coordinates)
+  	@canvas_array = convert_coordinates_to_array(coordinates)
+    @canvas = convert_canvas_to_string
+  end
 
   def convert_coordinates_to_array(coordinates)
     coordinates.split.drop(1)
@@ -13,9 +18,7 @@ module DrawHelper
   end
 
   def convert_canvas_to_string
-    ((("-" ) * width.to_i) +
-     ("--\n") +
-     (("|" + (" " * (width.to_i)) + "|\n") * height.to_i) +
-     (("-" ) * width.to_i) + "--").to_s
+    calculate_canvas_string
   end
+
 end

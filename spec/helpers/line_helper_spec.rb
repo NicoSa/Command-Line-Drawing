@@ -33,7 +33,8 @@ describe 'Line Helper' do
     it 'display canvas with horizontal line for a canvas of 10,5 and a horizontal line of 3,3 9,3 and precompile_horizontal_line_data method works' do
       create_canvas("C 18 5")
       @drawing_program.precompile_line_data("L 3 3 9 3")
-      expect(@drawing_program.display_canvas_with_line).to eq canvas_with_horizontal_line_3
+      @drawing_program.draw_line_on_canvas
+      expect(@drawing_program.canvas).to eq canvas_with_horizontal_line_3
     end
   end
 

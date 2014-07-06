@@ -87,6 +87,7 @@ def canvas_with_horizontal_line_5
   "----------------------------------------------------"
 end
 
+
 def canvas_with_vertical_line_1
   "----------------------\n" +
   "|                    |\n" +
@@ -120,6 +121,25 @@ def canvas_with_vertical_line_4
   "|   X              |\n" +
   "|   X              |\n" +
   "|                  |\n" +
+  "|                  |\n" +
+  "--------------------"
+end
+
+def canvas_with_box_1
+  "----------------------\n" +
+  "|               XXXXX|\n" +
+  "|               X   X|\n" +
+  "|               XXXXX|\n" +
+  "|                    |\n" +
+  "----------------------"
+end
+
+def canvas_with_box_2 
+  "--------------------\n" +
+  "|                  |\n" +
+  "|             XXX  |\n" +
+  "|             X X  |\n" +
+  "|             XXX  |\n" +
   "|                  |\n" +
   "--------------------"
 end
