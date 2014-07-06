@@ -9,12 +9,7 @@ module LineHelper
 
   def calculate_horizontal_line_array
     return calculate_vertical_line_array if @x1 == @x2
-    @line_array = [*(horizontal_starting_point...horizontal_end_point)]
-  end
-
-  def concat_vertical_line_array
-    @line_array << vertical_starting_point
-    add_rest_of_vertical_points
+    @line_array = [*(horizontal_starting_point...horizontal_end_point)] 
   end
 
   def calculate_vertical_line_array
@@ -22,8 +17,13 @@ module LineHelper
     @line_array
   end
 
+  def concat_vertical_line_array
+    @line_array << vertical_starting_point
+    add_rest_of_vertical_points
+  end
+
   def display_canvas_with_line
-    @canvas.chars.map.with_index do |elem,index|
+    @canvas = @canvas.chars.map!.with_index do |elem,index|
       if @line_array.include?(index)
         elem = "X"
       else

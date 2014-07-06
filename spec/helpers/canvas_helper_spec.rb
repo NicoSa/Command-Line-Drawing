@@ -123,3 +123,12 @@ def canvas_with_vertical_line_4
   "|                  |\n" +
   "--------------------"
 end
+
+def canvas_with_box_1
+  "----------------------\n" +
+  "|               XXXXX|\n" +
+  "|               X   X|\n" +
+  "|               XXXXX|\n" +
+  "|                    |\n" +
+  "----------------------"
+end
