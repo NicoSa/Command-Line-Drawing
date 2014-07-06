@@ -15,6 +15,8 @@ while answer.downcase != "q"
     puts canvas
   elsif answer.split.first.downcase == "l"
     puts @new_drawing.draw_line(answer)
+  elsif answer.split.first.downcase == "r"
+    puts @new_drawing.draw_box(answer)
   else
     puts "Can´t understand this command - press Q to quit!"
   end

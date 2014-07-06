@@ -20,9 +20,13 @@ class Draw
 
   def draw_line(coordinates)
     precompile_line_data(coordinates)
-    display_canvas_with_line
+    @canvas
+  end
+  
+  def draw_box(coordinates)
+    precompile_box_data(coordinates)
+    @canvas
   end
 
-  def draw_box(coordinates)
-  end
+  
 end
