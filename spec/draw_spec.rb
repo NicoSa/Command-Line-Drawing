@@ -74,5 +74,10 @@ describe 'Draw' do
   		create_canvas("C 20 4")
   		expect(@drawing_program.draw_box("R 16 1 20 3")).to eq canvas_with_box_1
   	end
+
+    it 'creates a box with the left upper corner at 14,2 and the right lower corner at 16,4' do
+      create_canvas("C 18 5")
+      expect(@drawing_program.draw_box("R 14 2 16 4")).to eq canvas_with_box_2
+    end
   end
 end

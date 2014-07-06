@@ -1,5 +1,10 @@
 module BoxHelper
 
+=begin
+the coordinates passed to the draw box outline represent
+all the combinations necessary to draw a box from two given 
+locations
+=end
   def precompile_box_data(coordinates)
   	set_box_corners(coordinates)
     draw_box_outline("L #{@a} #{@b} #{@c} #{@b}")

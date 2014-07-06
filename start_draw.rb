@@ -1,8 +1,10 @@
 require './lib/draw.rb'
 require './lib/helpers/draw_helper.rb'
 require './lib/helpers/line_helper.rb'
+require './lib/helpers/box_helper.rb'
 include DrawHelper
 include LineHelper
+include BoxHelper
 
 answer = ""
 @new_drawing = Draw.new

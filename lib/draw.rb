@@ -22,7 +22,7 @@ class Draw
     precompile_line_data(coordinates)
     @canvas
   end
-  
+
   def draw_box(coordinates)
     precompile_box_data(coordinates)
     @canvas
