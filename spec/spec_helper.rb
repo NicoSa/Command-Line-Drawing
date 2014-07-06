@@ -1,12 +1,14 @@
 require 'draw'
-require 'helpers/draw_helper'
+require 'helpers/canvas_helper'
 require 'helpers/line_helper'
 require 'helpers/box_helper'
+require 'helpers/coordinate_calculator_helper'
 require 'helpers/canvas_helper_spec'
 
-include DrawHelper
+include CanvasHelper
 include LineHelper
 include BoxHelper
+include CoordinateCalculator
 
 def create_canvas(coordinates)
   @drawing_program.create_canvas(coordinates)

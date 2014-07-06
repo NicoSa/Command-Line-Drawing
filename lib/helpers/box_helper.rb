@@ -1,7 +1,7 @@
 module BoxHelper
 
 =begin
-the coordinates passed to the draw box outline represent
+the coordinates passed to the draw box outline method represent
 all the combinations necessary to draw a box from two given 
 coordinates on the canvas
 =end

@@ -8,8 +8,8 @@ class Draw
   end
 
   def create_canvas(coordinates)
-    @canvas_array = convert_coordinates_to_array(coordinates)
-    @canvas = convert_canvas_to_string
+    precompile_canvas_data(coordinates)
+    @canvas
   end
 
   def draw_line(coordinates)
