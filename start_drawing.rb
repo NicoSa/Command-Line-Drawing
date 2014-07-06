@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require './lib/draw.rb'
 require './lib/helpers/canvas_helper.rb'
 require './lib/helpers/line_helper.rb'
