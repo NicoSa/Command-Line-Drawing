@@ -22,7 +22,7 @@ Draw Line
 ---
 ```sh
 L 5 1 9 1
-```sh
+```
 
 * Which will create a line from 5 to 9 on line 1
 
