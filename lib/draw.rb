@@ -1,10 +1,4 @@
-# require 'helpers/draw_helper'
-# require 'helpers/line_helper'
-
 class Draw
-
-  # include DrawHelper
-  # include LineHelper
 
   attr_reader :canvas, :canvas_array
 
@@ -27,6 +21,4 @@ class Draw
     precompile_box_data(coordinates)
     @canvas
   end
-
-  
 end

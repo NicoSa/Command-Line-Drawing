@@ -3,7 +3,7 @@ module BoxHelper
 =begin
 the coordinates passed to the draw box outline represent
 all the combinations necessary to draw a box from two given 
-locations
+coordinates on the canvas
 =end
   def precompile_box_data(coordinates)
   	set_box_corners(coordinates)

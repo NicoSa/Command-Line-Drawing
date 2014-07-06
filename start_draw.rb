@@ -19,9 +19,9 @@ while answer.downcase != "q"
     puts @new_drawing.draw_line(answer)
   elsif answer.split.first.downcase == "r"
     puts @new_drawing.draw_box(answer)
+  elsif answer.downcase == "q"
+    puts "Goodbye!"
   else
     puts "Can´t understand this command - press Q to quit!"
   end
 end
-
-puts "Goodbye!"

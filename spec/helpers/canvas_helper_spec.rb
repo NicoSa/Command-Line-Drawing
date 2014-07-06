@@ -87,6 +87,7 @@ def canvas_with_horizontal_line_5
   "----------------------------------------------------"
 end
 
+
 def canvas_with_vertical_line_1
   "----------------------\n" +
   "|                    |\n" +
